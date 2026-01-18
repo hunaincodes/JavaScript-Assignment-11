@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Assignment 43–48 (Events)</title>
+</head>
+<body>
+
+<!-- ================= QUESTION 1 ================= -->
+<h3>1) Alert on Link Click</h3>
+<a href="#" onclick="showAlert()">Click Me</a>
+
+<script>
+function showAlert() {
+    alert("Link clicked!");
+}
+</script>
+
+<hr>
+
+<!-- ================= QUESTION 2 ================= -->
+<h3>2) Mobile Images Alert</h3>
+
+<img src="https://via.placeholder.com/100" onclick="mobileMsg()" />
+<img src="https://via.placeholder.com/100" onclick="mobileMsg()" />
+<img src="https://via.placeholder.com/100" onclick="mobileMsg()" />
+
+<script>
+function mobileMsg() {
+    alert("Thanks for purchasing a phone from us");
+}
+</script>
+
+<hr>
+
+<!-- ================= QUESTION 3 ================= -->
+<h3>3) Student Records</h3>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Name</th>
+        <th>Class</th>
+        <th>Action</th>
+    </tr>
+
+    <tr>
+        <td>Ali</td>
+        <td>10</td>
+        <td><button onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+
+    <tr>
+        <td>Ahmed</td>
+        <td>9</td>
+        <td><button onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+
+    <tr>
+        <td>Sara</td>
+        <td>8</td>
+        <td><button onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+
+    <tr>
+        <td>Mark</td>
+        <td>10</td>
+        <td><button onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+</table>
+
+<script>
+function deleteRow(btn) {
+    var row = btn.parentNode.parentNode;
+    row.remove();
+}
+</script>
+
+<hr>
+
+<!-- ================= QUESTION 4 ================= -->
+<h3>4) Image Mouse Over / Out</h3>
+
+<img src="https://via.placeholder.com/150/0000FF"
+     onmouseover="changeImage(this)"
+     onmouseout="resetImage(this)" />
+
+<script>
+function changeImage(img) {
+    img.src = "https://via.placeholder.com/150/FF0000";
+}
+
+function resetImage(img) {
+    img.src = "https://via.placeholder.com/150/0000FF";
+}
+</script>
+
+<hr>
+
+<!-- ================= QUESTION 5 ================= -->
+<h3>5) Counter</h3>
+
+<button onclick="decrease()">Decrease</button>
+<span id="counter">0</span>
+<button onclick="increase()">Increase</button>
+
+<script>
+var count = 0;
+
+function increase() {
+    count++;
+    document.getElementById("counter").innerHTML = count;
+}
+
+function decrease() {
+    count--;
+    document.getElementById("counter").innerHTML = count;
+}
+</script>
+
+</body>
+</html>
